@@ -1,11 +1,11 @@
-# jswank/iq-server
+# CMYanko/demo-iq-server
 
-A Dockerfile for Sonatype Nexus IQ Server, based on CentOS.
+A Dockerfile for Sonatype Nexus IQ Server, based on CentOS. And specifically for creating demo or PoC environments. For PoC environments, be sure to fork so you can customize the config.yml for your environment.
 
 To run, binding the exposed port 8070 and 8071 to the host.
 
 ```
-$ docker run -d -p 8070:8070 -p 8071:8071 --name iq-server jswank/iq-server
+$ docker run -d -p 8070:8070 -p 8071:8071 --name iq-server CMYanko/iq-server
 ```
 
 To test:
@@ -19,7 +19,7 @@ To (re)build the image:
 Copy the Dockerfile and do the build-
 
 ```
-$ docker build --rm=true --tag=jswank/iq-server .
+$ docker build --rm=true --tag=CMYanko/iq-server .
 ```
 
 
@@ -42,7 +42,7 @@ $ docker logs -f iq-server
 * An environment variable, `JVM_OPTIONS`, used to control the JVM arguments
 
   ```
-  $ docker run -d -p 8070:8070 --name iq-server -e JVM_OPTIONS="-server -Xmx2g" jswank/iq-server
+  $ docker run -d -p 8070:8070 --name iq-server -e JVM_OPTIONS="-server -Xmx2g" CMYanko/iq-server
   ```
 
 
@@ -57,8 +57,8 @@ for additional information.
   this purpose.  This is the recommended approach.  
 
   ```
-  $ docker run -d --name iq-data jswank/iq-server echo "data-only container for IQ server"
-  $ docker run -d -p 8070:8070 --name iq-server --volumes-from iq-data jswank/iq-server
+  $ docker run -d --name iq-data CMYanko/iq-server echo "data-only container for IQ server"
+  $ docker run -d -p 8070:8070 --name iq-server --volumes-from iq-data CMYanko/iq-server
   ```
 
   2. *Mount a host directory as the volume*.  This is not portable, as it
@@ -68,7 +68,7 @@ for additional information.
 
   ```
   $ mkdir /some/dir/iq-data && chown -R 201 /some/dir/iq-data
-  $ docker run -d -p 8070:8070 --name iq-server -v /some/dir/iq-data:/sonatype-work jswank/iq-server
+  $ docker run -d -p 8070:8070 --name iq-server -v /some/dir/iq-data:/sonatype-work CMYanko/iq-server
   ```
 
 ### Changing IQ Server Configuration
@@ -78,7 +78,7 @@ There are two primary ways to update the configuration for iq-server.
 *Pass parameters to the JVM*.  For instance, to change the `baseUrl`:
 
 ```
-  $ docker run -d -e JVM_OPTIONS="dw.baseUrl=http://someaddress:8060" jswank/iq-server
+  $ docker run -d -e JVM_OPTIONS="dw.baseUrl=http://someaddress:8060" CMYanko/iq-server
 ```
 
 *Create an image w/ updated `config.yml`*:
@@ -86,7 +86,7 @@ There are two primary ways to update the configuration for iq-server.
 * Create a new `config.yml`
 * Create a `Dockerfile`:
 ```
-  FROM jswank/iq-server
+  FROM CMYanko/iq-server
   ADD config.yml /opt/sonatype/iq-server/
 ```
 * Create a local image:
