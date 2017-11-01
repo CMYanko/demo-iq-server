@@ -3,8 +3,8 @@ MAINTAINER Jason Swank <docker@scalene.net>
 
 ENV JAVA_HOME /opt/java
 ENV JAVA_VERSION_MAJOR 8
-ENV JAVA_VERSION_MINOR 131
-ENV JAVA_VERSION_BUILD 11 
+ENV JAVA_VERSION_MINOR 152
+ENV JAVA_VERSION_BUILD 16 
 ENV JAVA_DOWNLOAD_HASH=d54c1d3a095b4ff2b6607d096fa80163
 
 RUN yum install -y \
@@ -22,7 +22,7 @@ RUN mkdir -p /opt \
 
 
 ENV SONATYPE_WORK /sonatype-work
-ENV IQ_VERSION 1.38.0-02
+ENV IQ_VERSION 1.39.0-04
 
 RUN mkdir -p /opt/sonatype/iq-server \
   && curl --fail --silent --location --retry 3 \
