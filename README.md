@@ -76,13 +76,13 @@ for additional information.
 
 There are two primary ways to update the configuration for demo-iq-server. 
 
-*Pass parameters to the JVM*.  For instance, to change the `baseUrl`:
+*1) Pass parameters to the JVM*.  For instance, to change the `baseUrl`:
 
 ```
   $ docker run -d -e JVM_OPTIONS="dw.baseUrl=http://someaddress:8060" CMYanko/demo-iq-server
 ```
 
-*Create an image w/ updated `config.yml`*:
+*2} Create an image w/ updated `config.yml`*:
 
 * Create a new `config.yml`
 * Create a `Dockerfile`:
