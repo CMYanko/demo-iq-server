@@ -29,10 +29,10 @@ For PoC's and or custom config'd demo environments you'll likely want your own t
 
 * All logs are directed to stdout:
 
-```
-$ docker logs -f iq-server
-```
-  [Kitematic](https://kitematic.com/) is also great for seeing container logs!
+  ```
+  $ docker logs -f iq-server
+  ```
+    [Kitematic](https://kitematic.com/) is also great for seeing container logs!
   
 * Installation of IQ Server is to `/opt/sonatype/iq-server`.  
 
