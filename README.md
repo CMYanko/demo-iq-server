@@ -95,5 +95,6 @@ There are two primary ways to update the configuration for demo-iq-server.
   $ docker build -t my-iq-server .
 ```
 * Use this docker image as you normally would: `docker run -d my-iq-server`
+* ...or make a copy of the docker-compose file and update wioth yopur container name.
 
 
