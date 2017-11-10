@@ -12,6 +12,11 @@ These scripts assume the following:
 ```bash
 ./demo-setup.sh
 ```
+This will create folders and copy in a self-signed cert for NexusRM then run the docker-compse file.
+```
+
+```
+
 2. Install license key in IQ server
     1. Navigate to http://localhost:8070
     2. Sign in (container defaults)
