@@ -49,3 +49,5 @@ CMD ${JAVA_HOME}/bin/java \
   -Ddw.sonatypeWork=${SONATYPE_WORK} \
   -jar nexus-iq-server.jar \
   server config.yml
+
+HEALTHCHECK CMD curl http://localhost:8071/ping
