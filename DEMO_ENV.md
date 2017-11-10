@@ -43,8 +43,8 @@ The next time you run docker-compose up -d it will automatically check for new v
     5. Select Install > Locate License and Upload > Accept User Agreement  
 4. Restart Nexus to enable pro features (to include IQ integration). 
 ```bash
-docker stop nexus3
-docker start nexus3
+docker-compose down
+docker-compose up -d
 ```
 
 5. Link Nexus to the IQ server container
