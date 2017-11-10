@@ -1,5 +1,6 @@
 FROM       centos:centos7
-MAINTAINER Curtis Yanko <cyanko@sonatype.com>
+
+LABEL maintainer="Curtis Yanko <cyanko@sonatype.com>"
 
 ENV JAVA_HOME /opt/java
 ENV JAVA_VERSION_MAJOR 8
