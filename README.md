@@ -1,6 +1,6 @@
 # CMYanko/demo-iq-server
 
-A Dockerfile for Sonatype Nexus IQ Server, based on CentOS. And specifically for creating demo or PoC environments. For PoC environments, be sure to fork so you can customize the config.yml for your environment.
+A Dockerfile for Sonatype Nexus IQ Server, based on CentOS. And specifically for creating demo or PoC environments. For PoC environments, be sure to fork so you can customize the config.yml for your environment. Details for setting up a demo environment are [here](https://github.com/CMYanko/demo-iq-server/blob/master/DEMO_ENV.md).
 
 To run, binding the exposed port 8070 and 8071 to the host.
 
