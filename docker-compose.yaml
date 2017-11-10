@@ -18,7 +18,7 @@ services:
       - "8081:8081"
       - "8443:8443"
       - "18443:18443"
-      - "18444:18444"
+      - "5000:5000"
     image: bradbeck/nexus-https
     links:
       - iq-server
