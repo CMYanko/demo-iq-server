@@ -12,10 +12,20 @@ These scripts assume the following:
 ```bash
 ./demo-setup.sh
 ```
-This will create folders and copy in a self-signed cert for NexusRM then run the docker-compse file.
-```
+Inspecting the script we see it is making the directories for our persistent volumes and copying in the folder with a self signed cert for nexus to run HTTPS. Lastly it calls the docker-compose, the -d detaches it from the console output.
+```bash
+# Creates directories to be mounted to containers as volumes
+mkdir ~/iq-data ~/nexus-data
+cp -R ./nexus-ssl ~/nexus-ssl
 
+# Stands up test environment
+docker-compose up -d
 ```
+To stop the environment
+```bash
+docker-compose down
+```
+The next time you run docker-compose up -d it will automatically check for new versions and update the container(s).
 
 2. Install license key in IQ server
     1. Navigate to http://localhost:8070
