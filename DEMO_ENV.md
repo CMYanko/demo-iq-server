@@ -3,7 +3,7 @@ Scripts meant to simplify the standup of IQ-Server and Nexus in Docker.
 
 ## Prerequisites
 These scripts assume the following:
-1. You have Docker installed locally
+1. You have Docker installed locally. [Docker for Mac](https://www.docker.com/docker-mac) works well and I allocate 2 cpus and 2GB of memory to run these two containers.
 2. You have an active internet connection
 3. You have been provided a license key by Sonatype
 
