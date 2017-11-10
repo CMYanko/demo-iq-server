@@ -32,7 +32,8 @@ For PoC's and or custom config'd demo environments you'll likely want your own t
 ```
 $ docker logs -f iq-server
 ```
-
+  [Kitematic](https://kitematic.com/) is also great for seeing container logs!
+  
 * Installation of IQ Server is to `/opt/sonatype/iq-server`.  
 
 * A persistent directory, `/sonatype-work`, is used for report and DB storage.
