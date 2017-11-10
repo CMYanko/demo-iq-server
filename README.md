@@ -21,7 +21,7 @@ Copy the Dockerfile and do the build-
 ```
 $ docker build --rm=true --tag=CMYanko/demo-iq-server .
 ```
-For PoC's and or custom config'd demo environments you'll likely want your own tag and publish to a private repo. Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/config.yml) before the build will get them copied into you custome container. Usefule for setting up proxy servers, email notifications or integrating with JIRA.
+For PoC's and or custom config'd demo environments you'll likely want your own tag and publish to a private repo. Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/config.yml) before the build will get them copied into you custome container. Useful for setting up proxy servers, email notifications or integrating with JIRA. See [Changing IQ Server Configuration] below.
 
 ## Notes
 
