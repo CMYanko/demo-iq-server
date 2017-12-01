@@ -1,0 +1,25 @@
+version: '3'
+services:
+  iq-server:
+    #build: iq-server
+    volumes:
+      - ~/iq-data:/sonatype-work
+    ports:
+      - "8070:8070"
+      - "8071:8071"
+    image: curtyanko/demo-iq-server
+    container_name: iq-server
+  nexus:
+    #build: nexus
+    volumes:
+      - ~/nexus-data:/nexus-data
+      - ~/nexus-ssl:/opt/sonatype/nexus/etc/ssl
+    ports:
+      - "8081:8081"
+      - "8443:8443"
+      - "18443:18443"
+      - "5000:5000"
+    image: bradbeck/nexus-https
+    links:
+      - iq-server
+    container_name: nexus3
