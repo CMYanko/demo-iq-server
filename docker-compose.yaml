@@ -7,7 +7,7 @@ services:
     ports:
       - "8070:8070"
       - "8071:8071"
-    image: cmyanko/demo-iq-server
+    image: sonatype/nexus-iq-server
     container_name: iq-server
   nexus:
     #build: nexus
