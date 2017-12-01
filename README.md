@@ -1,26 +1,7 @@
 # CMYanko/demo-iq-server
 
-A Dockerfile for Sonatype Nexus IQ Server, based on CentOS. And specifically for creating demo or PoC environments. For PoC environments, be sure to fork so you can customize the config.yml for your environment. Details for setting up a demo environment are [here](https://github.com/CMYanko/demo-iq-server/blob/master/DEMO_ENV.md).
+A Docker-compose for Sonatype Nexus IQ Server, based on CentOS. And specifically for creating demo or PoC environments. For PoC environments, be sure to fork so you can customize the config.yml for your environment. Details for setting up a demo environment are [here](https://github.com/CMYanko/demo-iq-server/blob/master/DEMO_ENV.md).
 
-To run, binding the exposed port 8070 and 8071 to the host.
-
-```
-$ docker run -d -p 8070:8070 -p 8071:8071 --name iq-server CMYanko/demo-iq-server
-```
-
-To test:
-
-```
-$ curl http://localhost:8071/ping
-```
-
-To (re)build the image:
-
-Copy the Dockerfile and do the build-
-
-```
-$ docker build --rm=true --tag=CMYanko/demo-iq-server .
-```
 For PoC's and or custom config'd demo environments you'll likely want your own tag and publish to a private repo. Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/config.yml) before the build will get them copied into you custome container. Useful for setting up proxy servers, email notifications or integrating with JIRA. See [Changing IQ Server Configuration](https://github.com/CMYanko/demo-iq-server/blob/master/README.md#changing-iq-server-configuration) below.
 
 ## Notes
