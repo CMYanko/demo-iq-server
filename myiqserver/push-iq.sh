@@ -12,10 +12,9 @@ function print_usage() {
 
 #a lot can still go wrong here but it's a start...
 if [ "$1" != "" ]; then
-    docker build -t $DOCKERNAME/demo-iq-server:$1 .
-    docker tag $DOCKERNAME/demo-iq-server:$1 $DOCKERNAME/demo-iq-server:latest
-    docker tag $DOCKERNAME/demo-iq-server:latest mycompany.com:5000/$DOCKERNAME/demo-iq-server:$1
-    docker tag $DOCKERNAME/demo-iq-server:latest mycompany.com:5000/$DOCKERNAME/demo-iq-server:latest
+    docker login mycompany.com:5000
+    docker push mycompany.com:5000/$DOCKERNAME/demo-iq-server:$1
+    docker push mycompany.com:5000/$DOCKERNAME/demo-iq-server:latest
 else
     print_usage 
     exit 1
