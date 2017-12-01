@@ -23,7 +23,6 @@ To shut down the environment run
 docker-compose down
 ```
 
-Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/myiqserver/config.yml) before the build will get them copied into you custome container. Useful for setting up proxy servers, email notifications or integrating with JIRA. See [Changing IQ Server Configuration](https://github.com/CMYanko/demo-iq-server/blob/master/README.md#changing-iq-server-configuration) below.
 
 ## Notes
 
