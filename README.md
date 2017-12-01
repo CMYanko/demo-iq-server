@@ -1,8 +1,10 @@
 # CMYanko/demo-iq-server
 
-A Docker-compose for Sonatype Nexus IQ Server, based on CentOS. And specifically for creating demo or PoC environments. For PoC environments, be sure to fork so you can customize the config.yml for your environment. Details for setting up a demo environment are [here](https://github.com/CMYanko/demo-iq-server/blob/master/DEMO_ENV.md).
+A Docker-compose file and setup scripts to streamline a default configuration Nexus Platform Evaluation, PoC or Demo Environment.  Details for setting up a demo environment are [here](https://github.com/CMYanko/demo-iq-server/blob/master/DEMO_ENV.md).
 
-For PoC's and or custom config'd demo environments you'll likely want your own tag and publish to a private repo. Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/config.yml) before the build will get them copied into you custome container. Useful for setting up proxy servers, email notifications or integrating with JIRA. See [Changing IQ Server Configuration](https://github.com/CMYanko/demo-iq-server/blob/master/README.md#changing-iq-server-configuration) below.
+For PoC's and or custom config'd demo environments you'll likely want your own tag and publish to a private repo. I've created a seperate folder with a Dockerfile making a custom image based on our official image.
+
+Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/myiqserver/config.yml) before the build will get them copied into you custome container. Useful for setting up proxy servers, email notifications or integrating with JIRA. See [Changing IQ Server Configuration](https://github.com/CMYanko/demo-iq-server/blob/master/README.md#changing-iq-server-configuration) below.
 
 ## Notes
 
