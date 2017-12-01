@@ -4,6 +4,25 @@ A Docker-compose file and setup scripts to streamline a default configuration Ne
 
 For PoC's and or custom config'd demo environments you'll likely want your own tag and publish to a private repo. I've created a seperate folder with a Dockerfile making a custom image based on our official image.
 
+run the demo-setup script to create folders and copy in a self signed cert then call the docker-compose file. The '-d' detaches it from the console.
+
+```
+#!/usr/bin/env bash
+
+# Creates directories to be mounted to containers as volumes
+mkdir ~/iq-data ~/nexus-data
+cp -R ./nexus-ssl ~/nexus-ssl
+
+# Stands up test environment
+docker-compose up -d
+```
+
+To shut down the environment run
+
+```
+docker-compose down
+```
+
 Making modification to the [config.yml](https://github.com/CMYanko/demo-iq-server/blob/master/myiqserver/config.yml) before the build will get them copied into you custome container. Useful for setting up proxy servers, email notifications or integrating with JIRA. See [Changing IQ Server Configuration](https://github.com/CMYanko/demo-iq-server/blob/master/README.md#changing-iq-server-configuration) below.
 
 ## Notes
