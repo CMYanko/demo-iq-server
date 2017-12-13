@@ -90,6 +90,8 @@ There are two primary ways to update the configuration for demo-iq-server.
 ```
   FROM CMYanko/demo-iq-server
   ADD config.yml /opt/sonatype/iq-server/
+  
+  HEALTHCHECK CMD curl http://localhost:8071/ping
 ```
 * Create a local image:
 ```
