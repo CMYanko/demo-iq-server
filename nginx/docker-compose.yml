@@ -22,7 +22,7 @@ services:
       - '5000:5000'
       - '18443:18443'
     links:
-      - nexus-repository
+      - nexus
     command: [ nginx, '-g', 'daemon off;' ]
 
   nexus:
