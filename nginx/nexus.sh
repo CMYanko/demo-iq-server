@@ -18,5 +18,6 @@ until curl --fail --insecure https://localhost; do
   sleep 1
 done
 
+#This needs to be changed but is left here as an example
 curl -v -u admin:admin123 --insecure --header 'Content-Type: application/json' 'https://localhost/service/siesta/rest/v1/script' -d @nexus-repository/create-docker-proxy.json
 curl -v -X POST -u admin:admin123 --insecure --header 'Content-Type: text/plain' 'https://localhost/service/siesta/rest/v1/script/CreateDockerProxy/run'
