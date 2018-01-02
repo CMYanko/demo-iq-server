@@ -23,6 +23,7 @@ services:
       - '18443:18443'
     links:
       - nexus
+      - iq-server
     command: [ nginx, '-g', 'daemon off;' ]
 
   nexus:
@@ -41,7 +42,6 @@ services:
     volumes:
       - ~/iq-data:/sonatype-work
     ports:
-      - "8070:8070"
       - "8071:8071"
     image: sonatype/nexus-iq-server:1.42.0
     container_name: iq-server
