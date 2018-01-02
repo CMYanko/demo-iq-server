@@ -1,7 +1,7 @@
 import org.sonatype.nexus.blobstore.api.BlobStoreManager
 
 // create hosted repo and expose via https to allow deployments
-repository.createDockerHosted('docker-internal', null, 18444) 
+repository.createDockerHosted('docker-private', 5000, null) 
 
 // create proxy repo of Docker Hub and enable v1 to get search to work
 // no ports since access is only indirectly via group
@@ -17,7 +17,7 @@ repository.createDockerProxy('docker-hub',                   // name
                              )
 
 // create group and allow access via https
-def groupMembers = ['docker-hub', 'docker-internal']
+def groupMembers = ['docker-hub', 'docker-private']
 repository.createDockerGroup('docker-all', null, 18443, groupMembers, true)
 
 
