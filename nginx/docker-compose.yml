@@ -16,7 +16,7 @@ version: '3'
 
 services:
   nginx-proxy:
-    build: ./nginx
+    build: ./demo_w_nginx
     ports:
       - '443:443'
       - '5000:5000'
@@ -46,4 +46,3 @@ services:
       - "8071:8071"
     image: sonatype/nexus-iq-server:1.42.0
     container_name: iq-server
-    
