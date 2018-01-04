@@ -12,8 +12,8 @@ I also add two aliases to my /etc/hosts file to match the names of the container
 
 - Nexus Web UI with SSL accessible via https://nexus
 - Nexus Web UI over http via http://nexus:8081
-- Docker proxy registry accessible via https://nexus:18443
-- Docker Private Registry accessible via https://nexus:5000
+- Docker proxy group registry accessible via https://nexus:18443 (pull)
+- Docker Private Registry accessible via https://nexus:5000  (push)
 - IQ Server accessible via https://iq-server
 
 ## Operations
