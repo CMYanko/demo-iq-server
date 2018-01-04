@@ -7,8 +7,8 @@ mkdir ~/iq-data ~/nexus-data
 docker-compose up -d --build
 
 until curl --fail --insecure http://localhost:8081; do 
-  sleep 1
+  sleep 5
 done
 
 #This needs to be changed but is left here as an example
-./nexus-repoistory/provision.sh
+./nexus-repository/provision.sh
