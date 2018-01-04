@@ -38,7 +38,7 @@ docker-compose down
 
 ## Ports
 
-The ports are based on my own configuration but can easily be re-aligned via the nginx conf file. If you were previously using my setup with SSL built into Nexus then the big change is to remap 18443 and 5000 to http instead of https within Nexus. I inted to eventualy add some provisioning scripts to remove the need for manual configuration within Nexus. 18443 maps to my Docker-proxy group and 5000 maps to my docker-hosted repo. I run nexus on 8081 (to avoid a conflict with Jenkins) which can still be hot directly for non-https connections.
+The ports are based on my own configuration but can easily be re-aligned via the nginx conf file. If you were previously using my setup with SSL built into Nexus then the big change is to remap 18443 and 5000 to http instead of https within Nexus. I've added some provisioning scripts to remove the need for manual configuration within Nexus. 18443 maps to my Docker-proxy group and 5000 maps to my docker-hosted repo. I run nexus on 8081 (to avoid a conflict with Jenkins) which can still be hot directly for non-https connections. For now the provisioning only does Docker config items but additional examples are in place.
 
 ## SSL Certificates
 
