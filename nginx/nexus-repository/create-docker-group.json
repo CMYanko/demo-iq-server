@@ -1,5 +1,5 @@
 {
     "name": "CreateDockerGroup",
     "type": "groovy",
-    "content": "repository.createDockerGroup('docker-all', 18443, null, ['docker-hub', 'docker-private'] ,true)"
+    "content": "repository.createDockerGroup('docker-all', 18443, null, ['docker-private', 'docker-hub'] ,true)"
   }
