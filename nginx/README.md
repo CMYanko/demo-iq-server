@@ -21,10 +21,10 @@ I also add two aliases to my /etc/hosts file to match the names of the container
 To create and run the Nginx proxy, Nexus Repository Manager and DockerHub proxy, run:
 
 ```
-docker-compose up -d --build
+./demo-setup.sh
 ```
 
-Subsequent runs can use docker-compose without the build for nginx:
+Subsequent runs can use docker-compose without the build for nginx or the need to create the persistent folders:
 
 ```
 docker-compose up -d
