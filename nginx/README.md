@@ -24,16 +24,16 @@ To create and run the Nginx proxy, Nexus Repository Manager and DockerHub proxy,
 ./demo-setup.sh
 ```
 
-Subsequent runs can use docker-compose without the build for nginx or the need to create the persistent folders:
-
-```
-docker-compose up -d
-```
-
 To stop, use docker-compose:
 
 ```
 docker-compose down
+```
+
+Subsequent runs can use docker-compose without the build for nginx or the need to create the persistent folders:
+
+```
+docker-compose up -d
 ```
 
 ## Ports
