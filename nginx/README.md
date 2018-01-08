@@ -1,4 +1,4 @@
-# Nexus Platform Manager with Docker Support, behind Nginx
+# Nexus Platform with Docker Support, behind Nginx
 
 This is a template for deploying Nexus Repository Manager and IQ Server behind an NGINX proxy to offload SSL
 
