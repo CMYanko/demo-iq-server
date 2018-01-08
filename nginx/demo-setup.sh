@@ -11,8 +11,12 @@ until curl --fail --insecure http://localhost:8081; do
 done
 
 #Create Docker repos and group
-#curl -v -u admin:admin123 --insecure --header 'Content-Type: application/json' 'https://localhost/service/siesta/rest/v1/script' -d @nexus-repository/docker.json
-#curl -v -X POST -u admin:admin123 --insecure --header 'Content-Type: text/plain' 'https://localhost/service/siesta/rest/v1/script/Docker/run'
 cd nexus-repository
+./create.sh blobs.json
+./run.sh myBlobs
+
 ./create.sh docker.json
 ./run.sh Docker
+
+# ./create.sh maven.json
+# ./run.sh Maven
