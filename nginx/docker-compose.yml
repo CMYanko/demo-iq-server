@@ -27,7 +27,7 @@ services:
     command: [ nginx, '-g', 'daemon off;' ]
 
   nexus:
-    #build: nexus
+    build: ./iq-server
     volumes:
       - ~/nexus-data:/nexus-data
     ports:
