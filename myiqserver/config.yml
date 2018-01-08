@@ -3,10 +3,10 @@
 #
 
 # Directory for data files.
-sonatypeWork: /sonatype-work/clm-server
+sonatypeWork: ./sonatype-work/clm-server
 
 # Base URL of the Sonatype CLM server for user facing links back to the server.
-baseUrl: http://mycompany.com:8070/
+baseUrl: https://iq-server
 
 # Hour of the day(0-23) to schedule Policy Monitoring execution. The default is midnight.
 #policyMonitoringHour: 0
@@ -57,7 +57,7 @@ http:
     file:
 
       # If true, log requests to a file.
-      enabled: false
+      enabled: true
 
       # The file to which current statements will be logged.
       currentLogFilename: ./log/request.log
@@ -68,46 +68,46 @@ http:
       archivedLogFilenamePattern: ./log/request-%d.log.gz
 
       # The number of archived files to keep.
-      archivedFileCount: 5
+      archivedFileCount: 50
 
 # Notification mail settings.
 # If enabled, ensure that the baseUrl configuration setting is also enabled and correct, because generated emails often contain links to the server.
-mail:
+#mail:
 
   # The host running the SMTP server to use. 
-  hostname: "smtp.mailtrap.io"
+  #hostname: "127.0.0.1"
 
   # The port at which the SMTP server listens on. 
-  port: 465
+  #port: 587
 
   # The address used as From for outgoing notification mails sent by the server.
-  systemEmail: "iq-server@mycompany.com"
+  #systemEmail: "SonatypeCLM@localhost"
 
   # The username used to access the mail server.
-  username: "200258239c92a3"
+  #username: "anonymous"
 
   # The password used to access the mail server.
-  password: "8ac2860b581732"
+  #password: "guest"
   
   # Connect using SSL.
   #ssl: true
   
   # Connect using TLS.
-  tls: true
+  #tls: true
 
 # Notification JIRA settings.
 # Note that any user of the Nexus IQ Server will have access to see all projects and applicable issue types available
 # to the configured JIRA account. More details available in the Nexus IQ Server documentation. If enabled, ensure that
 # the baseUrl configuration setting is also enabled and correct, because generated tickets contain links to the server.
-jira:
+#jira:
   # The JIRA server address
-  url: "http://us-west.nexus-trial.com:8080/"
+  #url: "https://127.0.0.1/"
 
   # The username used to connect to the JIRA server
-  username: "cmyanko"
+  #username: "anonymous"
 
   # The password used to connect to the JIRA server
-  password: "DontUseMyPassword"
+  #password: "guest"
 
   # Any custom fields that you wish to populate in the JIRA notification. Any
   # required fields must have default values configured here. Examples are shown below.
@@ -188,7 +188,7 @@ logging:
   file:
 
     # If true, write log statements to a file.
-    enabled: false
+    enabled: true
 
     # Do not write log statements below this threshold to the file.
     threshold: ALL
