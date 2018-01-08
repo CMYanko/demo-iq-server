@@ -27,7 +27,7 @@ services:
     command: [ nginx, '-g', 'daemon off;' ]
 
   nexus:
-    build: ./iq-server
+    #build: nexus
     volumes:
       - ~/nexus-data:/nexus-data
     ports:
@@ -38,7 +38,7 @@ services:
     container_name: nexus3
 
   iq-server:
-    #build: iq-server
+    build: ./iq-server
     volumes:
       - ~/iq-data:/sonatype-work
     ports:
