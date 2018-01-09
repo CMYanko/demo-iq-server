@@ -45,6 +45,6 @@ The ports are based on my own configuration but can easily be re-aligned via the
 The Ngnix docker image build process generates insecure SSL certificates with fake location information and CNAME of localhost. Understand the risks of using these SSL certificates before proceeding. A deployed solution should use a valid CA certificate.
 
 
-## Dynamic COnfiguration
+## Dynamic Configuration
 
 Working examples of how to provision a new blobstore and create docker repos using it are in here and part of the setup. There are also placeholders for other formats like Maven, nnpm, etc...
