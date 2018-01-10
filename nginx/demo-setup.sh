@@ -10,6 +10,9 @@ until curl --fail --insecure http://localhost:8081; do
   sleep 5
 done
 
+#import license and policies to IQ server
+./iq-server/config-iq.sh
+
 #Create Docker repos and group
 cd nexus-repository
 ./create.sh blobs.json
