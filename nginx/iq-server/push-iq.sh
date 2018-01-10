@@ -13,7 +13,7 @@ function print_usage() {
 #a lot can still go wrong here but it's a start...
 if [ "$1" != "" ]; then
     docker login nexus:5000
-    docker push nexus5000/$DOCKERNAME/demo-iq-server:$1
+    docker push nexus:5000/$DOCKERNAME/demo-iq-server:$1
     docker push nexus:5000/$DOCKERNAME/demo-iq-server:latest
 else
     print_usage 
