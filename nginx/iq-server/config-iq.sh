@@ -3,11 +3,11 @@
 #Note: defaults creds are baked in so this will work on a fresh instance
 nexus() {
 java -jar nexus-cli-1.0-SNAPSHOT-shaded.jar \
-  -s http://localhost:8070 \
-  $@
+  -s http://localhost:8070 $@
 }
 
-cd $(cd ${0%/*}; pwd)
+
+cd iq-server
 
 echo "Importing license"
 # Update this to point to your license placed in this folder
@@ -18,5 +18,6 @@ nexus license install sonatype-nexus-firewall-lifecycle-2017.lic
 echo "Applying policies"
 nexus policy import Sonatype-Sample-Policy-Set-1.22.json
 
+#need to pop back up so we end where we started
 cd ..
 pwd
