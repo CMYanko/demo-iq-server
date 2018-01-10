@@ -35,7 +35,7 @@ services:
     image: sonatype/nexus3:3.7.1
     links:
       - iq-server
-    container_name: nexus3
+    container_name: nexus
 
   iq-server:
     build: ./iq-server
