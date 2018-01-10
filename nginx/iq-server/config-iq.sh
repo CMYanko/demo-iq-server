@@ -16,7 +16,7 @@ nexus license install sonatype-nexus-firewall-lifecycle-2017.lic
 
 #these are our sample policies but you might have customized and exported your own so feel free to update
 echo "Applying policies"
-nexus policy import Sonatype-Sample-Policy-Set-1.22.json
+nexus policy import myPolicies.json
 
 #need to pop back up so we end where we started
 cd ..
