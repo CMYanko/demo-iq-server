@@ -204,7 +204,7 @@ logging:
     archivedLogFilenamePattern: ./log/clm-server-%d.log.gz
 
     # The number of archived files to keep.
-    archivedFileCount: 50
+    archivedFileCount: 5
 
     logFormat: "%d{'yyyy-MM-dd HH:mm:ss,SSSZ'} %level [%thread] %X{username} %logger - %msg%n"
 
