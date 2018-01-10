@@ -14,7 +14,7 @@ echo "Importing license"
 #nexus license install <your license file>
 nexus license install sonatype-nexus-firewall-lifecycle-2017.lic
 
-#these are our sample policies but you might have customized and exported your own so feel free to update
+#these policies are based on the sample set with some changes I've made and exported.
 echo "Applying policies"
 nexus policy import myPolicies.json
 
