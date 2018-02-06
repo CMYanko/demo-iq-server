@@ -19,7 +19,7 @@ services:
       - "8443:8443"
       - "18443:18443"
       - "5000:5000"
-    image: bradbeck/nexus-https:3.7.1
+    image: bradbeck/nexus-https:3.8.0
     links:
       - iq-server
     container_name: nexus3
