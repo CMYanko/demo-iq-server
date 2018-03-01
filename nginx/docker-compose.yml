@@ -32,7 +32,7 @@ services:
       - ~/nexus-data:/nexus-data
     ports:
       - "8081:8081"
-    image: sonatype/nexus3:3.8.0
+    image: sonatype/nexus3:3.9.0-01
     links:
       - iq-server
     container_name: nexus
