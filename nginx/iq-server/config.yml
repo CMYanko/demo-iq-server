@@ -6,7 +6,7 @@
 sonatypeWork: ./sonatype-work/clm-server
 
 # Base URL of the Sonatype CLM server for user facing links back to the server.
-baseUrl: https://iq-server
+baseUrl: http://iq-server
 
 # Hour of the day(0-23) to schedule Policy Monitoring execution. The default is midnight.
 #policyMonitoringHour: 0
@@ -64,13 +64,13 @@ server:
         # The file to which current statements will be logged.
         currentLogFilename: ./log/request.log
 
-      # When the log file rotates, the archived log will be renamed to this and gzipped. The
-      # %d is replaced with the previous day (yyyy-MM-dd). Custom rolling windows can be created
-      # by passing a SimpleDateFormat-compatible format as an argument: "%d{yyyy-MM-dd-hh}".
-      archivedLogFilenamePattern: ./log/request-%d.log.gz
+        # When the log file rotates, the archived log will be renamed to this and gzipped. The
+        # %d is replaced with the previous day (yyyy-MM-dd). Custom rolling windows can be created
+        # by passing a SimpleDateFormat-compatible format as an argument: "%d{yyyy-MM-dd-hh}".
+        archivedLogFilenamePattern: ./log/request-%d.log.gz
 
-      # The number of archived files to keep.
-      archivedFileCount: 5
+        # The number of archived files to keep.
+        archivedFileCount: 5
 
 # Notification mail settings.
 # If enabled, ensure that the baseUrl configuration setting is also enabled and correct, because generated emails often contain links to the server.
