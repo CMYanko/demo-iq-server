@@ -6,7 +6,7 @@
 sonatypeWork: ./sonatype-work/clm-server
 
 # Base URL of the Sonatype CLM server for user facing links back to the server.
-baseUrl: http://iq-server
+baseUrl: https://iq-server
 
 # Hour of the day(0-23) to schedule Policy Monitoring execution. The default is midnight.
 #policyMonitoringHour: 0
@@ -204,7 +204,7 @@ logging:
       archivedLogFilenamePattern: ./log/clm-server-%d.log.gz
 
       # The number of archived files to keep.
-      archivedFileCount: 50
+      archivedFileCount: 5
 
 # Passphrase used to encrypt the Webhook Secret Keys
 #webhookSecretPassphrase: "^d1swM!FF&qQ"
@@ -215,4 +215,4 @@ logging:
   # maxPoolSize: 500
 
 # Sample data is created for new installs.
-createSampleData: true
+createSampleData: false
