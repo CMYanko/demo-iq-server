@@ -215,4 +215,4 @@ logging:
   # maxPoolSize: 500
 
 # Sample data is created for new installs.
-createSampleData: false
+createSampleData: true
