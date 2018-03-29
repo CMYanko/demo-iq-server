@@ -44,5 +44,5 @@ services:
     ports:
       - "8070:8070"
       - "8071:8071"
-    image: sonatype/nexus-iq-server
+    image: my-iq-server
     container_name: iq-server
