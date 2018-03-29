@@ -3,7 +3,7 @@
 #
 
 # Directory for data files.
-sonatypeWork: ./sonatype-work/clm-server
+sonatypeWork: /sonatype-work
 
 # Base URL of the Sonatype CLM server for user facing links back to the server.
 baseUrl: https://iq-server
