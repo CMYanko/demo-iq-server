@@ -2,7 +2,7 @@
 
 #Note: defaults creds are baked in so this will work on a fresh instance
 nexus() {
-java -jar nexus-iq-cli-1.45.0-01.jar \
+java -jar nexus-cli-0.2.0-SNAPSHOT-shaded.jar \
   -s http://localhost:8070 $@
 }
 
