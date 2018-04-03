@@ -8,6 +8,9 @@ sonatypeWork: /sonatype-work
 # Base URL of the Sonatype CLM server for user facing links back to the server.
 baseUrl: https://iq-server
 
+# Confirm you have read the upgrade instructions and come prepared
+#consentToUpgradeToVersion_1_45: true
+
 # Hour of the day(0-23) to schedule Policy Monitoring execution. The default is midnight.
 #policyMonitoringHour: 0
 
@@ -63,6 +66,8 @@ server:
 
         # The file to which current statements will be logged.
         currentLogFilename: ./log/request.log
+        
+        logFormat: "%clientHost %l %user [%date] \"%requestURL\" %statusCode %bytesSent %elapsedTime \"%header{User-Agent}\""
 
         # When the log file rotates, the archived log will be renamed to this and gzipped. The
         # %d is replaced with the previous day (yyyy-MM-dd). Custom rolling windows can be created

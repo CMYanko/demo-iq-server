@@ -17,7 +17,7 @@ version: '3'
 services:
   nginx-proxy:
     build: ./nginx
-    image: sonatype_nginx-proxy
+    image: sonatype_nginx-proxy:1.0
     ports:
       - '443:443'
       - '5000:5000'
@@ -45,5 +45,5 @@ services:
     ports:
       - "8070:8070"
       - "8071:8071"
-    image: my-iq-server
+    image: my-iq-server:1.45.0
     container_name: iq-server
