@@ -9,7 +9,7 @@ I also add two aliases to my /etc/hosts file to match the names of the container
 ```
 
 ## Features - 
-*Will transition in the new name soon to clean up some of the ports and save keystrokes with docker commands*
+*Will transition in the new name soon to clean up some of the ports and make this work with docker commands. As is there is no cert in path*
 
 - Nexus Web UI with SSL accessible via https://nexus
 - Nexus Web UI over http via http://nexus:8081 or http://localhost:8081
