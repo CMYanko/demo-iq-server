@@ -6,6 +6,8 @@ For PoC's and or custom config'd demo environments you'll likely want your own t
 
 run the demo-setup script to create folders and copy in a self signed cert then call the docker-compose file. The '-d' detaches it from the console.
 
+*Note: This project has gone stale and is left in place for some older blog post. Look in the Nginx folder for the most current work.*
+
 ```
 #!/usr/bin/env bash
 
