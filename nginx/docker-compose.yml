@@ -17,7 +17,7 @@ version: '3'
 services:
   nginx-proxy:
     build: ./nginx
-    image: sonatype_nginx-proxy:1.0
+    image: sonatype_nginx-proxy:2.0
     ports:
       - '443:443'
       - '5000:5000'
@@ -33,7 +33,7 @@ services:
       - ~/nexus-data:/nexus-data
     ports:
       - "8081:8081"
-    image: sonatype/nexus3:3.10.0
+    image: sonatype/nexus3:3.9.0
     links:
       - iq-server
     container_name: nexus
