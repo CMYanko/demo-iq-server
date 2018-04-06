@@ -8,7 +8,8 @@ I also add two aliases to my /etc/hosts file to match the names of the container
 127.0.0.1      localhost iq-server nexus iq-server.mycompany.com repo.mycompany.com docker.mycompany.com
 ```
 
-## Features
+## Features - 
+*Will transition in the new name soon to clean up some of the ports and save keystrokes with docker commands*
 
 - Nexus Web UI with SSL accessible via https://nexus
 - Nexus Web UI over http via http://nexus:8081 or http://localhost:8081
