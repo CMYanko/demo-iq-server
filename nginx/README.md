@@ -5,7 +5,7 @@ This is a template for deploying Nexus Repository Manager and IQ Server behind a
 I also add two aliases to my /etc/hosts file to match the names of the containers and simulate DNS from outside of docker host but this will setup and be accessible over http wtihout them:
 
 ```
-127.0.0.1      localhost iq-server nexus
+127.0.0.1      localhost iq-server nexus iq-server.mycompany.com repo.mycompany.com docker.mycompany.com
 ```
 
 ## Features
