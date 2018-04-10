@@ -6,7 +6,7 @@ mkdir ~/iq-data ~/nexus-data
 # Stands up test environment and builds nginix container to put our config in
 docker-compose up -d
 
-until curl --fail --insecure http://localhost:8081; do 
+until curl --fail --insecure http://localhost:8070; do 
   sleep 5
 done
 
@@ -14,12 +14,12 @@ done
 ./iq-server/config-iq.sh
 
 #Create Docker repos and group
-cd nexus-repository
-./create.sh blobs.json
-./run.sh myBlobs
+#cd nexus-repository
+#./create.sh blobs.json
+#./run.sh myBlobs
 
-./create.sh docker.json
-./run.sh Docker
+#./create.sh docker.json
+#./run.sh Docker
 
 # ./create.sh maven.json
 # ./run.sh Maven
