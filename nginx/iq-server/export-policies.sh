@@ -12,7 +12,7 @@ java -jar nexus-cli-0.2.0-SNAPSHOT-shaded.jar \
 # Enhanced architecture-quality to match teh SSSC report plus set a default
 # continuous monitoring phase to Operate. Some new categories, 3rd party and High Compliance
 echo "Exporting policies"
-nexus policy export $1
+nexus policy exportPolicies -o $1
 
 # Note need to pass in filename
 
