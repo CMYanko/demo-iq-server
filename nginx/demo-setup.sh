@@ -14,12 +14,12 @@ done
 ./iq-server/config-iq.sh
 
 #Create Docker repos and group
-#cd nexus-repository
-#./create.sh blobs.json
-#./run.sh myBlobs
+cd nexus-repository
+./create.sh blobs.json
+./run.sh myBlobs
 
-#./create.sh docker.json
-#./run.sh Docker
+./create.sh docker.json
+./run.sh Docker
 
-# ./create.sh maven.json
-# ./run.sh Maven
+ ./create.sh npm.json
+ ./run.sh npm
