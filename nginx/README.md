@@ -6,7 +6,9 @@ I also add two aliases to my /etc/hosts file to match the names of the container
 
 ```
 127.0.0.1      localhost iq-server nexus iq-server.mycompany.com repo.mycompany.com registry.mycompany.com
-```
+``
+
+*Note: This project has gone stale and is left in place for some older blog post. Look in the [Nexus Platform Reference](https://github.com/CMYanko/nexus-platform-reference) folder for the most current work.*`
 
 ## Features - 
 *Will transition in the new name soon to clean up some of the ports and make this work with docker commands. As is there is no cert in path*
