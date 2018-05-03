@@ -6,7 +6,7 @@ For PoC's and or custom config'd demo environments you'll likely want your own t
 
 run the demo-setup script to create folders and copy in a self signed cert then call the docker-compose file. The '-d' detaches it from the console.
 
-*Note: This project has gone stale and is left in place for some older blog post. Look in the [Nginx](https://github.com/CMYanko/demo-iq-server/tree/master/nginx) folder for the most current work.*
+*Note: This project has gone stale and is left in place for some older blog post. Look in the [Nexus Platform Reference](https://github.com/CMYanko/nexus-platform-reference) folder for the most current work.*
 
 ```
 #!/usr/bin/env bash
